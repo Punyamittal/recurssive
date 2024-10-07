@@ -1,0 +1,14 @@
+def binary(arr,target,low,high):
+    if low>high:
+        return -1
+    mid=(high+low)//2
+    if arr[mid]==target:
+        return mid
+    elif arr[mid]<target:
+        return binary(arr,target,mid+1,high)
+    else:
+        return binary(arr,target,low,mid-1)
+arr = [1, 2, 3, 4, 5, 6]
+target = 4
+print(binary(arr, target, 0, len(arr) - 1)) 
+    
