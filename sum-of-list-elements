@@ -1,0 +1,5 @@
+def roj(n):
+    if not n:
+        return 0
+    return n[0]+roj(n[1:])
+print(roj([1,2,3,4,5]))
