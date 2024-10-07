@@ -1,0 +1,6 @@
+def roj(n):
+    n=abs(n)
+    if n==0:
+        return 0
+    return 1+roj(n//10)
+print(roj(12345))
